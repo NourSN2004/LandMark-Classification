@@ -1,49 +1,50 @@
-````markdown
 # Deep Image Classification with PyTorch
 
 A modular PyTorch project demonstrating:
 
-- Training a ResNet‐style convolutional neural network (CNN) from scratch  
-- Transfer learning with pretrained torchvision models  
-- Data loading with augmentation, validation splits, and test sets  
-- Custom training loop with learning‐rate scheduling and checkpointing  
-- A scripted `Predictor` wrapper for easy inference  
-- Interactive HTML demos of training and transfer‐learning workflows
+* Training a ResNet‐style convolutional neural network (CNN) from scratch
+* Transfer learning with pretrained torchvision models
+* Data loading with augmentation, validation splits, and test sets
+* Custom training loop with learning‐rate scheduling and checkpointing
+* A scripted `Predictor` wrapper for easy inference
+* Interactive HTML demos of training and transfer‐learning workflows
 
 ---
 
 ## 🚀 Features
 
-- **CNN from Scratch**: Build and train a residual‐block network (`src/model.py`)  
-- **Transfer Learning**: Swap in any `torchvision` model and fine‐tune its final layer (`src/transfer.py`)  
-- **Data Pipeline**: Automatic mean/std computation, augmentation, train/val/test splits (`src/data.py`)  
-- **Training Utilities**:  
-  - `train_one_epoch` & `valid_one_epoch` loops with GPU support  
-  - Cosine‐annealing LR scheduler & checkpointing (`train.py`)  
-  - Configurable loss (cross‐entropy with smoothing) & optimizers (SGD/AdamW) (`src/optimization.py`)  
-- **Inference API**: `Predictor` class for resizing, centering, normalizing and softmax output (`src/predictor.py`)  
-- **Live Loss Plotting**: Optional interactive plots via `livelossplot`  
-- **Demos**: Prebuilt HTML outputs of notebook workflows:  
-  - `app.html` — end‐to‐end training demo  
-  - `cnn_from_scratch.html` — building a CNN by hand  
-  - `transfer_learning.html` — fine‐tuning pretrained models  
+* **CNN from Scratch**: Build and train a residual‐block network (`src/model.py`)
+* **Transfer Learning**: Swap in any `torchvision` model and fine‐tune its final layer (`src/transfer.py`)
+* **Data Pipeline**: Automatic mean/std computation, augmentation, train/val/test splits (`src/data.py`)
+* **Training Utilities**:
+
+  * `train_one_epoch` & `valid_one_epoch` loops with GPU support
+  * Cosine‐annealing LR scheduler & checkpointing (`train.py`)
+  * Configurable loss (cross‐entropy with smoothing) & optimizers (SGD/AdamW) (`src/optimization.py`)
+* **Inference API**: `Predictor` class for resizing, centering, normalizing and softmax output (`src/predictor.py`)
+* **Live Loss Plotting**: Optional interactive plots via `livelossplot`
+* **Demos**: Prebuilt HTML outputs of notebook workflows:
+
+  * `app.html` — end‐to‐end training demo
+  * `cnn_from_scratch.html` — building a CNN by hand
+  * `transfer_learning.html` — fine‐tuning pretrained models
 
 ---
 
 ## 📦 Requirements
 
-- Python 3.8+  
-- PyTorch & torchvision  
-- NumPy  
-- Matplotlib  
-- tqdm  
-- livelossplot  
+* Python 3.8+
+* PyTorch & torchvision
+* NumPy
+* Matplotlib
+* tqdm
+* livelossplot
 
 Install with:
 
 ```bash
 pip install torch torchvision numpy matplotlib tqdm livelossplot
-````
+```
 
 ---
 
@@ -138,7 +139,7 @@ optimizer = get_optimizer(model, optimizer="adam", learning_rate=1e-3)
 
 ```python
 import torch
-from src.predictor import Predictor
+from src/predictor import Predictor
 from src.model import MyModel
 from src.helpers import compute_mean_and_std
 
@@ -177,4 +178,3 @@ This project was developed as part of the **Udacity Nanodegree** program. Contri
 ## 📜 License
 
 MIT License © Nour Shammaa
-
